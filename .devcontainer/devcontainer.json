@@ -1,0 +1,19 @@
+// .devcontainer/devcontainer.json
+
+{
+    "name": "Django React Todo Dev Environment",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint"
+            ]
+        }
+    },
+    "postCreateCommand": "bash -c 'mkdir -p /workspace/backend /workspace/frontend && cd /workspace/backend && pip install django && django-admin startproject backend . && cd /workspace/frontend && npm install -g npm@latest && npm create vite@latest . -- --template react && npm install'"
+}
