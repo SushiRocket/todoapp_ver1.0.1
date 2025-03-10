@@ -1,3 +1,5 @@
+# .devcontainer/Dockerfile
+
 # 例: Python3.11 + Node20 両方を一緒に使えるベースイメージを作る
 FROM python:3.11-slim AS base
 
